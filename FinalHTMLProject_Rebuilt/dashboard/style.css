@@ -1,0 +1,141 @@
+/* تنسيقات عامة */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    color: #333;
+}
+
+.dashboard-header {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.dashboard-nav a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dashboard-nav a:hover {
+    color: #fff;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* تنسيق العناوين والأقسام */
+.dashboard-container section {
+    margin-bottom: 30px;
+}
+
+.dashboard-container h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* تنسيق قائمة الإحصائيات */
+.stats-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.stats-list li {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    flex: 1;
+    text-align: center;
+    border: 1px solid #e9ecef;
+}
+
+/* تنسيق بطاقات الإشعارات */
+.notification-card {
+    background: #fff8e1;
+    border-right: 4px solid #ffc107;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+.notification-card h3 {
+    margin: 0 0 5px 0;
+    color: #856404;
+    font-size: 1.1rem;
+}
+
+.notification-card p {
+    margin: 0;
+    color: #534e3b;
+}
+
+/* تنسيق الروابط السريعة */
+.quick-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.quick-links li {
+    flex: 1;
+    text-align: center;
+}
+
+.quick-links a {
+    display: block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.quick-links a:hover {
+    background-color: #2980b9;
+}
+
+
+.dashboard-nav a {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-nav a:hover {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+
+
+/* التذييل */
+.dashboard-footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 14px;
+}
+

@@ -1,0 +1,157 @@
+/* تنسيق الأساسيات العامة */
+body.profile-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* تنسيق رأس الصفحة العلوي وخلفية التدرج */
+.profile-header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.profile-logo h1 {
+    margin: 0 0 20px 0;
+    font-size: 2.3rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* تنسيق شريط التنقل وزر الصفحة الرئيسية */
+.profile-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.profile-nav .button-link {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-nav .button-link:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+
+/* تنسيق الحاوية الرئيسية للمحتوى */
+.profile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.profile-container section {
+    margin-bottom: 45px;
+}
+
+.profile-container h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* تنسيق صورة المستخدم الشخصية */
+.profile-img-wrapper img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #3b82f6;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* تنسيق معلومات المستخدم */
+.profile-info-section p {
+    font-size: 1.05rem;
+    color: #475569;
+    margin: 8px 0;
+}
+
+/* تنسيق حقول النموذج */
+.profile-quick-form .form-group {
+    margin-bottom: 20px;
+}
+
+.profile-quick-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    text-align: right;
+}
+
+.profile-quick-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    background-color: #fafbfc;
+    box-sizing: border-box;
+    font-size: 15px;
+    direction: rtl;
+    transition: all 0.3s ease;
+}
+
+.profile-quick-form input:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* تنسيق زر حفظ التغييرات */
+.profile-submit-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.profile-submit-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* تنسيق تذييل الصفحة */
+.profile-footer {
+    text-align: center;
+    padding: 25px;
+    color: #7f8c8d;
+    background-color: #eaeded;
+    font-size: 14px;
+    border-top: 1px solid #dcdde1;
+}

@@ -1,0 +1,188 @@
+/* تنسيق الأساسيات العامة وإعدادات الصفحة */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* تنسيق رأس الصفحة العلوي وخلفية التدرج */
+.home-header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* تنسيق عنوان الموقع الرئيسي */
+.home-logo h1 {
+    margin: 0 0 20px 0;
+    font-size: 2.3rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* ضبط توسط شريط التنقل */
+.home-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* تنسيق القائمة الأفقية واتجاه العناصر */
+.home-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    direction: rtl;
+}
+
+.home-nav li {
+    display: inline-block;
+}
+
+/* تنسيق روابط التنقل والأزرار */
+.home-nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+/* تأثيرات التفاعل وتغيير الحالة عند المرور أو التنشيط */
+.home-nav a:hover, 
+.home-nav a.active {
+    color: #ffffff;
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* تنسيق الحاوية الرئيسية للمحتوى */
+.home-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.home-container section {
+    margin-bottom: 45px;
+}
+
+/* تنسيق العناوين الفرعية داخل المحتوى */
+.home-container h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* تنسيق بطاقات المقالات */
+.home-article-card {
+    background: #ffffff;
+    border-right: 5px solid #3498db;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* تنسيق حاوية الوسائط المتعددة (صور وفيديو) */
+.media-wrapper {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-wrapper img, 
+.media-wrapper video {
+    max-width: 100%;
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق مجموعات حقول الإدخال في النموذج */
+.home-quick-form .form-group {
+    margin-bottom: 20px;
+}
+
+/* تنسيق التسميات التوضيحية للحقول */
+.home-quick-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    text-align: right;
+}
+
+/* تنسيق حقول النصوص ومنطقة النص */
+.home-quick-form input,
+.home-quick-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    background-color: #fafbfc;
+    box-sizing: border-box;
+    font-size: 15px;
+    direction: rtl;
+}
+
+/* تأثير التهدئة والتركيز على حقول الإدخال */
+.home-quick-form input:focus,
+.home-quick-form textarea:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* تنسيق زر الإرسال */
+.home-submit-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.home-submit-btn:hover {
+    background: #2563eb;
+}
+
+/* تنسيق تذييل الصفحة السفلي */
+.home-footer {
+    text-align: center;
+    padding: 25px;
+    color: #7f8c8d;
+    background-color: #eaeded;
+    font-size: 14px;
+    border-top: 1px solid #dcdde1;
+}

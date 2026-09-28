@@ -1,0 +1,177 @@
+/* تنسيقات عامة */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+/* الهيدر */
+.contact-header {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-header h1 {
+    margin: 0 0 10px 0;
+}
+
+.contact-nav a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-nav a:hover {
+    color: #ffffff;
+}
+
+.contact-nav a {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-nav a:hover {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+
+/* الحاوية الرئيسية */
+.contact-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* مقدمة الصفحة */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-intro h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contact-intro p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* تنسيق النموذج */
+.contact-form-section {
+    margin-bottom: 40px;
+}
+
+.contact-form-section h3, .contact-info h3 {
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #219653;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* معلومات التواصل */
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.contact-info .info-item span {
+    font-weight: bold;
+    margin-left: 10px;
+    color: #2c3e50;
+    min-width: 130px;
+}
+
+.contact-info .info-item a, 
+.contact-info .info-item p {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0;
+}
+
+.contact-info .info-item a:hover {
+    text-decoration: underline;
+}
+
+/* التذييل */
+.contact-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #7f8c8d;
+    background-color: #f1f2f6;
+}
+

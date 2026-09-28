@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>الدورات - أكاديمية البرمجة</title>
+    <!-- الخط العربي (Readex Pro) من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap">
+    <!-- Bootstrap 5.3 (RTL) + Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- تطبيق المظهر المحفوظ (فاتح/داكن) قبل عرض الصفحة -->
+    <script>document.documentElement.setAttribute('data-bs-theme', localStorage.getItem('theme') || 'light');</script>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body-tertiary" style="--bs-body-font-family: 'Readex Pro', system-ui, sans-serif;">
+
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg bg-body border-bottom shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <span class="d-inline-flex align-items-center justify-content-center rounded-3 text-bg-primary p-2 lh-1"><i class="bi bi-code-slash"></i></span>
+                أكاديمية البرمجة
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="القائمة">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house me-1"></i>الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" href="courses.html" aria-current="page"><i class="bi bi-journal-code me-1"></i>الدورات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-1"></i>لوحة التحكم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html"><i class="bi bi-search me-1"></i>بحث</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>تواصل معنا</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-outline-secondary btn-sm rounded-circle" type="button" data-theme-toggle title="تبديل المظهر"><i class="bi bi-moon-stars"></i></button>
+                    <div class="dropdown">
+                        <button class="btn border bg-body-tertiary text-body btn-sm rounded-pill d-flex align-items-center gap-2 px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle text-bg-primary fw-bold lh-1 p-2">ع</span>
+                            <span class="d-none d-sm-inline">عدنان</span>
+                            <i class="bi bi-chevron-down small"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>الملف الشخصي</a></li>
+                            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>الإعدادات</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="index.html"><i class="bi bi-box-arrow-left me-2"></i>تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="subscribe.html">اشترك الآن</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- عنوان الصفحة -->
+    <header class="bg-primary bg-gradient text-white py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-2">
+                    <li class="breadcrumb-item"><a class="link-light link-opacity-75 link-underline-opacity-0" href="index.html">الرئيسية</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">الدورات</li>
+                </ol>
+            </nav>
+            <h1 class="display-6 fw-bold mb-2"><i class="bi bi-journal-code me-2"></i>الدورات</h1>
+            <p class="lead mb-0 text-white-50">اختر مسارك وابدأ رحلتك في تطوير الويب</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <!-- تصفية حسب المستوى -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+            <h2 class="h4 fw-bold mb-0">المسارات التعليمية المتاحة</h2>
+            <div class="btn-group" role="group" aria-label="تصفية المستوى">
+                <input type="radio" class="btn-check" name="level" id="lvlAll" value="all" checked>
+                <label class="btn btn-outline-primary" for="lvlAll">الكل</label>
+                <input type="radio" class="btn-check" name="level" id="lvlBeginner" value="beginner">
+                <label class="btn btn-outline-primary" for="lvlBeginner">مبتدئ</label>
+                <input type="radio" class="btn-check" name="level" id="lvlIntermediate" value="intermediate">
+                <label class="btn btn-outline-primary" for="lvlIntermediate">متوسط</label>
+                <input type="radio" class="btn-check" name="level" id="lvlAdvanced" value="advanced">
+                <label class="btn btn-outline-primary" for="lvlAdvanced">متقدم</label>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5" id="coursesGrid">
+                <div class="col-md-6 col-xl-4" data-level="beginner">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start justify-content-between mb-3">
+                                <span class="d-inline-flex rounded-4 bg-danger-subtle text-danger-emphasis fs-2 p-3 lh-1"><i class="bi bi-filetype-html"></i></span>
+                                <span class="badge rounded-pill bg-body-tertiary text-body border">مبتدئ</span>
+                            </div>
+                            <h5 class="fw-bold mb-1">HTML</h5>
+                            <p class="text-body-secondary mb-3">من الصفر إلى الاحتراف</p>
+                            <div class="d-flex gap-3 small text-body-secondary">
+                                <span><i class="bi bi-clock me-1"></i>10 ساعات</span>
+                                <span><i class="bi bi-collection-play me-1"></i>24 درس</span>
+                                <span class="text-warning"><i class="bi bi-star-fill me-1"></i><span class="text-body-secondary">4.9</span></span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+                            <button type="button" class="btn btn-danger w-100 rounded-pill" data-enroll="HTML"><i class="bi bi-plus-circle me-1"></i> انضم الآن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4" data-level="beginner">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start justify-content-between mb-3">
+                                <span class="d-inline-flex rounded-4 bg-primary-subtle text-primary-emphasis fs-2 p-3 lh-1"><i class="bi bi-filetype-css"></i></span>
+                                <span class="badge rounded-pill bg-body-tertiary text-body border">مبتدئ - متوسط</span>
+                            </div>
+                            <h5 class="fw-bold mb-1">CSS</h5>
+                            <p class="text-body-secondary mb-3">فن التصميم الإبداعي والواجهات</p>
+                            <div class="d-flex gap-3 small text-body-secondary">
+                                <span><i class="bi bi-clock me-1"></i>8 ساعات</span>
+                                <span><i class="bi bi-collection-play me-1"></i>20 درس</span>
+                                <span class="text-warning"><i class="bi bi-star-fill me-1"></i><span class="text-body-secondary">4.8</span></span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+                            <button type="button" class="btn btn-primary w-100 rounded-pill" data-enroll="CSS"><i class="bi bi-plus-circle me-1"></i> انضم الآن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4" data-level="advanced">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start justify-content-between mb-3">
+                                <span class="d-inline-flex rounded-4 bg-warning-subtle text-warning-emphasis fs-2 p-3 lh-1"><i class="bi bi-filetype-js"></i></span>
+                                <span class="badge rounded-pill bg-body-tertiary text-body border">متوسط - متقدم</span>
+                            </div>
+                            <h5 class="fw-bold mb-1">JavaScript</h5>
+                            <p class="text-body-secondary mb-3">تطوير المنطق والبرمجة التفاعلية</p>
+                            <div class="d-flex gap-3 small text-body-secondary">
+                                <span><i class="bi bi-clock me-1"></i>15 ساعة</span>
+                                <span><i class="bi bi-collection-play me-1"></i>36 درس</span>
+                                <span class="text-warning"><i class="bi bi-star-fill me-1"></i><span class="text-body-secondary">4.9</span></span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+                            <button type="button" class="btn btn-warning w-100 rounded-pill" data-enroll="JavaScript"><i class="bi bi-plus-circle me-1"></i> انضم الآن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4" data-level="intermediate">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start justify-content-between mb-3">
+                                <span class="d-inline-flex rounded-4 bg-success-subtle text-success-emphasis fs-2 p-3 lh-1"><i class="bi bi-git"></i></span>
+                                <span class="badge rounded-pill bg-body-tertiary text-body border">متوسط</span>
+                            </div>
+                            <h5 class="fw-bold mb-1">Git & GitHub</h5>
+                            <p class="text-body-secondary mb-3">أساسيات إدارة المشاريع البرمجية</p>
+                            <div class="d-flex gap-3 small text-body-secondary">
+                                <span><i class="bi bi-clock me-1"></i>6 ساعات</span>
+                                <span><i class="bi bi-collection-play me-1"></i>14 درس</span>
+                                <span class="text-warning"><i class="bi bi-star-fill me-1"></i><span class="text-body-secondary">4.7</span></span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+                            <button type="button" class="btn btn-success w-100 rounded-pill" data-enroll="Git & GitHub"><i class="bi bi-plus-circle me-1"></i> انضم الآن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4" data-level="intermediate">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start justify-content-between mb-3">
+                                <span class="d-inline-flex rounded-4 bg-info-subtle text-info-emphasis fs-2 p-3 lh-1"><i class="bi bi-bootstrap"></i></span>
+                                <span class="badge rounded-pill bg-body-tertiary text-body border">متوسط</span>
+                            </div>
+                            <h5 class="fw-bold mb-1">Bootstrap</h5>
+                            <p class="text-body-secondary mb-3">بناء مواقع متجاوبة بسرعة وكفاءة</p>
+                            <div class="d-flex gap-3 small text-body-secondary">
+                                <span><i class="bi bi-clock me-1"></i>7 ساعات</span>
+                                <span><i class="bi bi-collection-play me-1"></i>18 درس</span>
+                                <span class="text-warning"><i class="bi bi-star-fill me-1"></i><span class="text-body-secondary">4.8</span></span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+                            <button type="button" class="btn btn-info w-100 rounded-pill" data-enroll="Bootstrap"><i class="bi bi-plus-circle me-1"></i> انضم الآن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4" data-level="advanced">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start justify-content-between mb-3">
+                                <span class="d-inline-flex rounded-4 bg-secondary-subtle text-secondary-emphasis fs-2 p-3 lh-1"><i class="bi bi-trophy"></i></span>
+                                <span class="badge rounded-pill bg-body-tertiary text-body border">متقدم</span>
+                            </div>
+                            <h5 class="fw-bold mb-1">مشروع التخرج</h5>
+                            <p class="text-body-secondary mb-3">ابنِ موقعاً متكاملاً من الصفر</p>
+                            <div class="d-flex gap-3 small text-body-secondary">
+                                <span><i class="bi bi-clock me-1"></i>12 ساعة</span>
+                                <span><i class="bi bi-collection-play me-1"></i>10 درس</span>
+                                <span class="text-warning"><i class="bi bi-star-fill me-1"></i><span class="text-body-secondary">5.0</span></span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0 px-4 pb-4 pt-0">
+                            <button type="button" class="btn btn-secondary w-100 rounded-pill" data-enroll="مشروع التخرج"><i class="bi bi-plus-circle me-1"></i> انضم الآن</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- جدول التفاصيل -->
+        <div class="card border-0 shadow-sm rounded-4 mb-5">
+            <div class="card-header bg-transparent border-0 p-4 pb-0">
+                <h2 class="h4 fw-bold mb-1">جدول تفاصيل المسارات</h2>
+                <p class="text-body-secondary small mb-0">مقارنة سريعة بين الدورات</p>
+            </div>
+            <div class="card-body p-4">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>اسم الدورة</th>
+                                <th>مدة المحتوى</th>
+                                <th>عدد الدروس</th>
+                                <th>المستوى الدراسي</th>
+                                <th>إجراء</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="d-flex align-items-center gap-2"><i class="bi bi-filetype-html fs-5 text-danger"></i><span class="fw-semibold">HTML</span></div></td>
+                                <td>10 ساعات</td>
+                                <td>24</td>
+                                <td><span class="badge rounded-pill text-bg-success">مبتدئ</span></td>
+                                <td><button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" data-enroll="HTML">انضم الآن</button></td>
+                            </tr>
+                            <tr>
+                                <td><div class="d-flex align-items-center gap-2"><i class="bi bi-filetype-css fs-5 text-primary"></i><span class="fw-semibold">CSS</span></div></td>
+                                <td>8 ساعات</td>
+                                <td>20</td>
+                                <td><span class="badge rounded-pill text-bg-success">مبتدئ - متوسط</span></td>
+                                <td><button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" data-enroll="CSS">انضم الآن</button></td>
+                            </tr>
+                            <tr>
+                                <td><div class="d-flex align-items-center gap-2"><i class="bi bi-filetype-js fs-5 text-warning"></i><span class="fw-semibold">JavaScript</span></div></td>
+                                <td>15 ساعة</td>
+                                <td>36</td>
+                                <td><span class="badge rounded-pill text-bg-danger">متوسط - متقدم</span></td>
+                                <td><button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" data-enroll="JavaScript">انضم الآن</button></td>
+                            </tr>
+                            <tr>
+                                <td><div class="d-flex align-items-center gap-2"><i class="bi bi-git fs-5 text-success"></i><span class="fw-semibold">Git & GitHub</span></div></td>
+                                <td>6 ساعات</td>
+                                <td>14</td>
+                                <td><span class="badge rounded-pill text-bg-warning">متوسط</span></td>
+                                <td><button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" data-enroll="Git & GitHub">انضم الآن</button></td>
+                            </tr>
+                            <tr>
+                                <td><div class="d-flex align-items-center gap-2"><i class="bi bi-bootstrap fs-5 text-info"></i><span class="fw-semibold">Bootstrap</span></div></td>
+                                <td>7 ساعات</td>
+                                <td>18</td>
+                                <td><span class="badge rounded-pill text-bg-warning">متوسط</span></td>
+                                <td><button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" data-enroll="Bootstrap">انضم الآن</button></td>
+                            </tr>
+                            <tr>
+                                <td><div class="d-flex align-items-center gap-2"><i class="bi bi-trophy fs-5 text-secondary"></i><span class="fw-semibold">مشروع التخرج</span></div></td>
+                                <td>12 ساعة</td>
+                                <td>10</td>
+                                <td><span class="badge rounded-pill text-bg-danger">متقدم</span></td>
+                                <td><button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" data-enroll="مشروع التخرج">انضم الآن</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- الفيديو -->
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                    <div class="ratio ratio-16x9 bg-dark">
+                        <video controls>
+                            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                            متصفحك لا يدعم تشغيل الفيديو.
+                        </video>
+                    </div>
+                    <div class="card-body p-4">
+                        <h2 class="h5 fw-bold"><i class="bi bi-camera-video me-2 text-danger"></i>تعرّف على بيئة التعلم</h2>
+                        <p class="text-body-secondary mb-0">شاهد كيف تبدو الدروس والتمارين داخل المنصة قبل ما تبدأ.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- الأسئلة الشائعة -->
+            <div class="col-lg-5">
+                <h2 class="h4 fw-bold mb-3">أسئلة شائعة</h2>
+                <div class="accordion accordion-flush rounded-4 overflow-hidden shadow-sm" id="faq">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header"><button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">هل أحتاج خبرة سابقة؟</button></h3>
+                        <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body text-body-secondary">لا، مسار HTML يبدأ معك من الصفر تماماً.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header"><button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q2">هل أحصل على شهادة؟</button></h3>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body text-body-secondary">نعم، شهادة إتمام بعد إنهاء كل مسار واجتياز الاختبار النهائي.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header"><button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q3">كم مدة الوصول للدورة؟</button></h3>
+                        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body text-body-secondary">وصول مدى الحياة لكل الدروس والتحديثات المستقبلية.</div></div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header"><button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q4">هل أقدر أتعلم من الجوال؟</button></h3>
+                        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body text-body-secondary">أكيد، المنصة متجاوبة وتشتغل على كل الأجهزة.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="bg-dark text-white-50 pt-5 pb-4 mt-auto" data-bs-theme="dark">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold d-flex align-items-center gap-2"><i class="bi bi-code-slash text-primary"></i> أكاديمية البرمجة</h5>
+                    <p class="small mb-3">منصة عربية لتعلم تطوير الويب خطوة بخطوة، من HTML حتى بناء مشاريعك الاحترافية.</p>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white fw-semibold">المنصة</h6>
+                    <ul class="list-unstyled small d-grid gap-2">
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="index.html">الرئيسية</a></li>
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="courses.html">الدورات</a></li>
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="search.html">بحث</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white fw-semibold">حسابي</h6>
+                    <ul class="list-unstyled small d-grid gap-2">
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="dashboard.html">لوحة التحكم</a></li>
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="profile.html">الملف الشخصي</a></li>
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="settings.html">الإعدادات</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white fw-semibold">النشرة البريدية</h6>
+                    <p class="small">اشترك ليصلك جديد الدورات والمقالات.</p>
+                    <form class="needs-validation" novalidate data-toast="تم اشتراكك في النشرة البريدية 🎉">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="بريدك الإلكتروني" required>
+                            <button class="btn btn-primary" type="submit">اشتراك</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="small text-center mb-0">© 2026 جميع الحقوق محفوظة - أكاديمية البرمجة</p>
+        </div>
+    </footer>
+
+    <!-- رسالة التأكيد (Toast) -->
+    <div class="toast-container position-fixed bottom-0 start-0 p-3">
+        <div id="appToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-semibold"><i class="bi bi-check-circle-fill me-2"></i><span data-toast-text>تم بنجاح</span></div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="إغلاق"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        // تصفية الدورات حسب المستوى
+        document.querySelectorAll('input[name="level"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                document.querySelectorAll('#coursesGrid [data-level]').forEach(card => {
+                    card.classList.toggle('d-none', radio.value !== 'all' && card.dataset.level !== radio.value);
+                });
+            });
+        });
+
+        // زر الانضمام
+        document.querySelectorAll('[data-enroll]').forEach(btn => {
+            btn.addEventListener('click', () => showToast('تم تسجيلك في دورة ' + btn.dataset.enroll + ' بنجاح 🎓'));
+        });
+    </script>
+</body>
+</html>

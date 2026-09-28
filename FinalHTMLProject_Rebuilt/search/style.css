@@ -1,0 +1,170 @@
+/* تنسيق الأساسيات العامة لصفحة البحث */
+body.search-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* تنسيق رأس الصفحة العلوي وخلفية التدرج */
+.search-header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.search-logo h1 {
+    margin: 0 0 20px 0;
+    font-size: 2.3rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* تنسيق شريط التنقل وزر الصفحة الرئيسية */
+.search-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-nav .button-link {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-nav .button-link:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+
+/* تنسيق الحاوية الرئيسية للمحتوى */
+.search-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.search-container section {
+    margin-bottom: 45px;
+}
+
+.search-container h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* تنسيق نموذج البحث وحقل الإدخال وزر البحث بجانبه */
+.search-input-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.search-box-form input {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px 16px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    background-color: #fafbfc;
+    font-size: 15px;
+    direction: rtl;
+    transition: all 0.3s ease;
+}
+
+.search-box-form input:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.search-submit-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.search-submit-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* تنسيق قائمة نتائج البحث */
+.results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.results-list li {
+    background: #fafbfc;
+    border-right: 4px solid #3b82f6;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-top: 1px solid #e1e8ed;
+    border-left: 1px solid #e1e8ed;
+    border-bottom: 1px solid #e1e8ed;
+    transition: all 0.3s ease;
+}
+
+.results-list li:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    border-color: #3b82f6;
+}
+
+.results-list a {
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+.results-list a:hover {
+    color: #3b82f6;
+}
+
+/* تنسيق تذييل الصفحة */
+.search-footer {
+    text-align: center;
+    padding: 25px;
+    color: #7f8c8d;
+    background-color: #eaeded;
+    font-size: 14px;
+    border-top: 1px solid #dcdde1;
+}

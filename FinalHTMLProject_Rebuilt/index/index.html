@@ -1,0 +1,95 @@
+<!-- مشروع HTML نهائي - صفحة كاملة -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الصفحة الرئيسية - أكاديمية البرمجة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- الهيدر وقائمة التنقل المتكاملة -->
+    <header class="home-header">
+        <div class="home-logo">
+            <h1>منصة البرمجة الاحترافية</h1>
+        </div>
+       <nav class="home-nav">
+    <ul>
+        <li><a href="index.html" class="active">الرئيسية</a></li>
+        <li><a href="../courses/courses.html">الدورات</a></li>
+        <li><a href="../dashboard/dashboard.html">لوحة التحكم</a></li>
+        <li><a href="../profile/profile.html">الملف الشخصي</a></li>
+        <li><a href="../settings/settings.html">الإعدادات</a></li>
+        <li><a href="../subscribe/subscribe.html">الاشتراك</a></li>
+        <li><a href="../search/search.html">بحث</a></li>
+        <li><a href="../contact/contact.html">تواصل معنا</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="home-container">
+        <!-- قسم المقدمة -->
+        <section class="home-hero-section">
+            <h2>مقدمة عن المنصة</h2>
+            <p>تهدف هذه المنصة إلى تعليم لغة HTML وأساسيات تطوير الويب بأسلوب عملي واحترافي عبر مسار تعليمي متكامل.</p>
+        </section>
+
+        <!-- قسم المقالات المميزة -->
+        <section class="home-articles-section">
+            <h2>مقالات مميزة</h2>
+            <article class="home-article-card">
+                <h3>لماذا تعتبر HTML هي الأساس؟</h3>
+                <p>HTML هي اللغة الأساسية لبناء هيكل صفحات الويب. بدونها، لا يمكن للمتصفح عرض أو فهم أي محتوى.</p>
+            </article>
+            <article class="home-article-card">
+                <h3>نصائح لتعلم البرمجة بسرعة</h3>
+                <p>ابدأ دائماً بالمشاريع العملية، واحرص على كتابة الكود بنفسك بدلًا من النسخ واللصق لترسيخ المعلومات.</p>
+            </article>
+        </section>
+
+        <!-- قسم الوسائط والمعلومات الإضافية -->
+        <section class="home-media-section">
+            <h2>معلومات إضافية مرئية</h2>
+            <div class="media-wrapper">
+                <div class="image-box">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D16AQEizR3fndpw5w/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1723857767205?e=2147483647&v=beta&t=GgRz9EwE-_zm6CGI-n2Z7ogrDjBWiSiZhjP-Avb3Zbs" alt="صورة معلوماتية عن البرمجة">
+                </div>
+                <div class="video-box">
+                    <video controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم نموذج التواصل السريع -->
+        <section class="home-contact-section">
+            <h2>نموذج تواصل سريع</h2>
+            <form class="home-quick-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="home-name">الاسم:</label>
+                    <input type="text" id="home-name" name="name" placeholder="أدخل اسمك هنا" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="home-email">البريد:</label>
+                    <input type="email" id="home-email" name="email" placeholder="example@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="home-message">رسالتك:</label>
+                    <textarea id="home-message" name="message" rows="4" placeholder="اكتب رسالتك باختصار..." required></textarea>
+                </div>
+
+                <button type="submit" class="home-submit-btn">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="home-footer">
+        <p>© 2026 جميع الحقوق محفوظة - أكاديمية البرمجة</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>لوحة التحكم - أكاديمية البرمجة</title>
+    <!-- الخط العربي (Readex Pro) من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap">
+    <!-- Bootstrap 5.3 (RTL) + Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- تطبيق المظهر المحفوظ (فاتح/داكن) قبل عرض الصفحة -->
+    <script>document.documentElement.setAttribute('data-bs-theme', localStorage.getItem('theme') || 'light');</script>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body-tertiary" style="--bs-body-font-family: 'Readex Pro', system-ui, sans-serif;">
+
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg bg-body border-bottom shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <span class="d-inline-flex align-items-center justify-content-center rounded-3 text-bg-primary p-2 lh-1"><i class="bi bi-code-slash"></i></span>
+                أكاديمية البرمجة
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="القائمة">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house me-1"></i>الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html"><i class="bi bi-journal-code me-1"></i>الدورات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" href="dashboard.html" aria-current="page"><i class="bi bi-speedometer2 me-1"></i>لوحة التحكم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html"><i class="bi bi-search me-1"></i>بحث</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>تواصل معنا</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-outline-secondary btn-sm rounded-circle" type="button" data-theme-toggle title="تبديل المظهر"><i class="bi bi-moon-stars"></i></button>
+                    <div class="dropdown">
+                        <button class="btn border bg-body-tertiary text-body btn-sm rounded-pill d-flex align-items-center gap-2 px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle text-bg-primary fw-bold lh-1 p-2">ع</span>
+                            <span class="d-none d-sm-inline">عدنان</span>
+                            <i class="bi bi-chevron-down small"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>الملف الشخصي</a></li>
+                            <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>الإعدادات</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="index.html"><i class="bi bi-box-arrow-left me-2"></i>تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="subscribe.html">اشترك الآن</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4 py-lg-5">
+        <div class="row g-4">
+            <!-- القائمة الجانبية -->
+            <aside class="col-lg-3">
+                <div class="card border-0 shadow-sm rounded-4 sticky-lg-top">
+                    <div class="card-body text-center p-4">
+                        <img src="https://media.craiyon.com/2025-07-23/ZY9IxIu7RLu6IJpxI39Cpw.webp" alt="صورة المستخدم" class="rounded-circle object-fit-cover border border-4 border-primary-subtle mb-3" width="88" height="88">
+                        <h5 class="fw-bold mb-0">عدنان الدخيل</h5>
+                        <span class="badge rounded-pill text-bg-warning mt-2"><i class="bi bi-gem me-1"></i>عضوية ذهبية</span>
+                    </div>
+                    <div class="list-group list-group-flush rounded-bottom-4">
+                        <a href="dashboard.html" class="list-group-item list-group-item-action active border-0" aria-current="true"><i class="bi bi-speedometer2 me-2"></i>نظرة عامة</a>
+                        <a href="courses.html" class="list-group-item list-group-item-action border-0"><i class="bi bi-journal-code me-2"></i>دوراتي</a>
+                        <a href="#notifications" class="list-group-item list-group-item-action border-0 d-flex align-items-center"><i class="bi bi-bell me-2"></i>الإشعارات<span class="badge rounded-pill text-bg-danger ms-auto">2</span></a>
+                        <a href="profile.html" class="list-group-item list-group-item-action border-0"><i class="bi bi-person me-2"></i>الملف الشخصي</a>
+                        <a href="settings.html" class="list-group-item list-group-item-action border-0"><i class="bi bi-gear me-2"></i>الإعدادات</a>
+                        <a href="contact.html" class="list-group-item list-group-item-action border-0"><i class="bi bi-headset me-2"></i>الدعم الفني</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- المحتوى -->
+            <div class="col-lg-9">
+                <!-- الترحيب -->
+                <div class="p-4 p-lg-5 rounded-4 bg-primary bg-gradient text-white shadow mb-4 position-relative overflow-hidden">
+                    <div class="row align-items-center g-3">
+                        <div class="col-md-8">
+                            <h1 class="h2 fw-bold mb-2">أهلاً عدنان 👋</h1>
+                            <p class="mb-3 text-white-50">أنت على بعد <strong class="text-white">10 دروس</strong> من إنهاء مسار JavaScript. استمر، أداؤك ممتاز هذا الأسبوع!</p>
+                            <a href="courses.html" class="btn btn-light rounded-pill px-4 fw-semibold"><i class="bi bi-play-fill me-1"></i> أكمل التعلّم</a>
+                        </div>
+                        <div class="col-md-4 text-center d-none d-md-block">
+                            <i class="bi bi-rocket-takeoff display-1 opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الإحصائيات -->
+                <div class="row g-3 mb-4">
+                    <div class="col-6 col-xl-3">
+                        <div class="card border-0 shadow-sm rounded-4 h-100"><div class="card-body">
+                            <span class="d-inline-flex rounded-3 bg-success-subtle text-success-emphasis p-2 lh-1 fs-5 mb-3"><i class="bi bi-check2-circle"></i></span>
+                            <div class="fs-2 fw-bold lh-1">15</div><div class="small text-body-secondary mt-1">الدورات المكتملة</div>
+                        </div></div>
+                    </div>
+                    <div class="col-6 col-xl-3">
+                        <div class="card border-0 shadow-sm rounded-4 h-100"><div class="card-body">
+                            <span class="d-inline-flex rounded-3 bg-primary-subtle text-primary-emphasis p-2 lh-1 fs-5 mb-3"><i class="bi bi-collection"></i></span>
+                            <div class="fs-2 fw-bold lh-1">25</div><div class="small text-body-secondary mt-1">الدورات المتاحة</div>
+                        </div></div>
+                    </div>
+                    <div class="col-6 col-xl-3">
+                        <div class="card border-0 shadow-sm rounded-4 h-100"><div class="card-body">
+                            <span class="d-inline-flex rounded-3 bg-warning-subtle text-warning-emphasis p-2 lh-1 fs-5 mb-3"><i class="bi bi-award"></i></span>
+                            <div class="fs-2 fw-bold lh-1">5</div><div class="small text-body-secondary mt-1">الشهادات المستلمة</div>
+                        </div></div>
+                    </div>
+                    <div class="col-6 col-xl-3">
+                        <div class="card border-0 shadow-sm rounded-4 h-100"><div class="card-body">
+                            <span class="d-inline-flex rounded-3 bg-danger-subtle text-danger-emphasis p-2 lh-1 fs-5 mb-3"><i class="bi bi-fire"></i></span>
+                            <div class="fs-2 fw-bold lh-1">12</div><div class="small text-body-secondary mt-1">يوم تعلّم متواصل</div>
+                        </div></div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <!-- التقدم الحالي -->
+                    <div class="col-xl-7">
+                        <div class="card border-0 shadow-sm rounded-4 h-100">
+                            <div class="card-header bg-transparent border-0 p-4 pb-0 d-flex align-items-center">
+                                <h2 class="h5 fw-bold mb-0">دوراتي الحالية</h2>
+                                <a href="courses.html" class="small ms-auto text-decoration-none">عرض الكل</a>
+                            </div>
+                            <div class="card-body px-4 pt-2">
+                            <div class="d-flex align-items-center gap-3 py-3 border-bottom">
+                                <span class="d-inline-flex rounded-3 bg-warning-subtle text-warning-emphasis fs-4 p-2 lh-1"><i class="bi bi-filetype-js"></i></span>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between mb-1"><span class="fw-semibold">JavaScript</span><span class="small text-body-secondary">72%</span></div>
+                                    <div class="progress" role="progressbar" aria-label="JavaScript" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+                                        <div class="progress-bar bg-warning" style="width: 72%"></div>
+                                    </div>
+                                    <div class="small text-body-secondary mt-1">26 من 36 درس</div>
+                                </div>
+                                <a href="courses.html" class="btn btn-sm border bg-body-tertiary text-body rounded-pill d-none d-sm-inline-block">متابعة</a>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 py-3 border-bottom">
+                                <span class="d-inline-flex rounded-3 bg-primary-subtle text-primary-emphasis fs-4 p-2 lh-1"><i class="bi bi-filetype-css"></i></span>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between mb-1"><span class="fw-semibold">CSS</span><span class="small text-body-secondary">45%</span></div>
+                                    <div class="progress" role="progressbar" aria-label="CSS" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+                                        <div class="progress-bar bg-primary" style="width: 45%"></div>
+                                    </div>
+                                    <div class="small text-body-secondary mt-1">9 من 20 درس</div>
+                                </div>
+                                <a href="courses.html" class="btn btn-sm border bg-body-tertiary text-body rounded-pill d-none d-sm-inline-block">متابعة</a>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 py-3">
+                                <span class="d-inline-flex rounded-3 bg-success-subtle text-success-emphasis fs-4 p-2 lh-1"><i class="bi bi-git"></i></span>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between mb-1"><span class="fw-semibold">Git & GitHub</span><span class="small text-body-secondary">20%</span></div>
+                                    <div class="progress" role="progressbar" aria-label="Git & GitHub" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+                                        <div class="progress-bar bg-success" style="width: 20%"></div>
+                                    </div>
+                                    <div class="small text-body-secondary mt-1">3 من 14 درس</div>
+                                </div>
+                                <a href="courses.html" class="btn btn-sm border bg-body-tertiary text-body rounded-pill d-none d-sm-inline-block">متابعة</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- النشاط الأسبوعي -->
+                    <div class="col-xl-5">
+                        <div class="card border-0 shadow-sm rounded-4 h-100">
+                            <div class="card-header bg-transparent border-0 p-4 pb-0 d-flex align-items-center">
+                                <h2 class="h5 fw-bold mb-0">نشاطك هذا الأسبوع</h2>
+                                <span class="badge rounded-pill text-bg-success ms-auto"><i class="bi bi-graph-up-arrow me-1"></i><span dir="ltr">+18%</span></span>
+                            </div>
+                            <div class="card-body px-4">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="small text-body-secondary text-nowrap" style="width: 4.5rem">السبت</span>
+                                <div class="progress flex-grow-1" role="progressbar" aria-label="السبت" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                    <div class="progress-bar bg-primary bg-gradient" style="width: 40%"></div>
+                                </div>
+                                <span class="small fw-semibold" style="width: 2.5rem">2س</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="small text-body-secondary text-nowrap" style="width: 4.5rem">الأحد</span>
+                                <div class="progress flex-grow-1" role="progressbar" aria-label="الأحد" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                    <div class="progress-bar bg-primary bg-gradient" style="width: 65%"></div>
+                                </div>
+                                <span class="small fw-semibold" style="width: 2.5rem">3س</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="small text-body-secondary text-nowrap" style="width: 4.5rem">الإثنين</span>
+                                <div class="progress flex-grow-1" role="progressbar" aria-label="الإثنين" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                    <div class="progress-bar bg-primary bg-gradient" style="width: 30%"></div>
+                                </div>
+                                <span class="small fw-semibold" style="width: 2.5rem">1س</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="small text-body-secondary text-nowrap" style="width: 4.5rem">الثلاثاء</span>
+                                <div class="progress flex-grow-1" role="progressbar" aria-label="الثلاثاء" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                    <div class="progress-bar bg-primary bg-gradient" style="width: 85%"></div>
+                                </div>
+                                <span class="small fw-semibold" style="width: 2.5rem">4س</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="small text-body-secondary text-nowrap" style="width: 4.5rem">الأربعاء</span>
+                                <div class="progress flex-grow-1" role="progressbar" aria-label="الأربعاء" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                    <div class="progress-bar bg-primary bg-gradient" style="width: 55%"></div>
+                                </div>
+                                <span class="small fw-semibold" style="width: 2.5rem">2س</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="small text-body-secondary text-nowrap" style="width: 4.5rem">الخميس</span>
+                                <div class="progress flex-grow-1" role="progressbar" aria-label="الخميس" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                    <div class="progress-bar bg-primary bg-gradient progress-bar-striped progress-bar-animated" style="width: 95%"></div>
+                                </div>
+                                <span class="small fw-semibold" style="width: 2.5rem">4س</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="small text-body-secondary text-nowrap" style="width: 4.5rem">الجمعة</span>
+                                <div class="progress flex-grow-1" role="progressbar" aria-label="الجمعة" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                    <div class="progress-bar bg-primary bg-gradient" style="width: 20%"></div>
+                                </div>
+                                <span class="small fw-semibold" style="width: 2.5rem">1س</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- الإشعارات -->
+                    <div class="col-xl-7" id="notifications">
+                        <div class="card border-0 shadow-sm rounded-4 h-100">
+                            <div class="card-header bg-transparent border-0 p-4 pb-2 d-flex align-items-center">
+                                <h2 class="h5 fw-bold mb-0">التنبيهات والإشعارات الهامة</h2>
+                                <span class="badge rounded-pill text-bg-danger ms-2">2 جديد</span>
+                            </div>
+                            <div class="list-group list-group-flush px-2 pb-3">
+                                <div class="list-group-item border-0 d-flex gap-3 rounded-3">
+                                    <span class="d-inline-flex align-self-start rounded-3 bg-warning-subtle text-warning-emphasis p-2 lh-1"><i class="bi bi-calendar-event"></i></span>
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex justify-content-between"><h3 class="h6 fw-bold mb-1">موعد اختبار جديد</h3><small class="text-body-secondary">قبل ساعة</small></div>
+                                        <p class="small text-body-secondary mb-0">تم جدولة اختبار CSS بتاريخ 20 يونيو الساعة 3:00 مساءً.</p>
+                                    </div>
+                                </div>
+                                <div class="list-group-item border-0 d-flex gap-3 rounded-3">
+                                    <span class="d-inline-flex align-self-start rounded-3 bg-info-subtle text-info-emphasis p-2 lh-1"><i class="bi bi-lightning-charge"></i></span>
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex justify-content-between"><h3 class="h6 fw-bold mb-1">تحديث جديد في الدورة</h3><small class="text-body-secondary">أمس</small></div>
+                                        <p class="small text-body-secondary mb-0">تم إضافة محتوى تفاعلي ومشاريع عملية جديدة لدورة JavaScript.</p>
+                                    </div>
+                                </div>
+                                <div class="list-group-item border-0 d-flex gap-3 rounded-3">
+                                    <span class="d-inline-flex align-self-start rounded-3 bg-success-subtle text-success-emphasis p-2 lh-1"><i class="bi bi-award"></i></span>
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex justify-content-between"><h3 class="h6 fw-bold mb-1">مبروك! شهادة جديدة</h3><small class="text-body-secondary">قبل 3 أيام</small></div>
+                                        <p class="small text-body-secondary mb-0">حصلت على شهادة إتمام مسار HTML بتقدير ممتاز.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- روابط سريعة + الاختبار القادم -->
+                    <div class="col-xl-5">
+                        <div class="card border-0 shadow-sm rounded-4 mb-4">
+                            <div class="card-body p-4">
+                                <h2 class="h5 fw-bold mb-3">روابط الوصول السريع</h2>
+                                <div class="row g-2">
+                                    <div class="col-4"><a href="profile.html" class="btn border bg-body-tertiary text-body w-100 rounded-4 py-3 d-grid gap-1"><i class="bi bi-person-gear fs-4 text-primary"></i><span class="small">ملفي</span></a></div>
+                                    <div class="col-4"><a href="courses.html" class="btn border bg-body-tertiary text-body w-100 rounded-4 py-3 d-grid gap-1"><i class="bi bi-journal-code fs-4 text-success"></i><span class="small">الدورات</span></a></div>
+                                    <div class="col-4"><a href="contact.html" class="btn border bg-body-tertiary text-body w-100 rounded-4 py-3 d-grid gap-1"><i class="bi bi-headset fs-4 text-danger"></i><span class="small">الدعم</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0 shadow-sm rounded-4 text-bg-dark" data-bs-theme="dark">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-alarm text-warning fs-5"></i><span class="small text-white-50">الاختبار القادم</span></div>
+                                <h3 class="h5 fw-bold mb-1">اختبار CSS النهائي</h3>
+                                <p class="small text-white-50 mb-3">20 يونيو · 3:00 مساءً · 45 دقيقة</p>
+                                <button type="button" class="btn btn-warning btn-sm rounded-pill px-3" data-remind><i class="bi bi-bell me-1"></i> ذكّرني</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="bg-dark text-white-50 pt-5 pb-4 mt-auto" data-bs-theme="dark">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold d-flex align-items-center gap-2"><i class="bi bi-code-slash text-primary"></i> أكاديمية البرمجة</h5>
+                    <p class="small mb-3">منصة عربية لتعلم تطوير الويب خطوة بخطوة، من HTML حتى بناء مشاريعك الاحترافية.</p>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a class="btn btn-outline-light btn-sm rounded-circle" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white fw-semibold">المنصة</h6>
+                    <ul class="list-unstyled small d-grid gap-2">
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="index.html">الرئيسية</a></li>
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="courses.html">الدورات</a></li>
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="search.html">بحث</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white fw-semibold">حسابي</h6>
+                    <ul class="list-unstyled small d-grid gap-2">
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="dashboard.html">لوحة التحكم</a></li>
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="profile.html">الملف الشخصي</a></li>
+                        <li><a class="link-light link-opacity-50 link-opacity-100-hover link-underline-opacity-0" href="settings.html">الإعدادات</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white fw-semibold">النشرة البريدية</h6>
+                    <p class="small">اشترك ليصلك جديد الدورات والمقالات.</p>
+                    <form class="needs-validation" novalidate data-toast="تم اشتراكك في النشرة البريدية 🎉">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="بريدك الإلكتروني" required>
+                            <button class="btn btn-primary" type="submit">اشتراك</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="small text-center mb-0">© 2026 جميع الحقوق محفوظة - أكاديمية البرمجة</p>
+        </div>
+    </footer>
+
+    <!-- رسالة التأكيد (Toast) -->
+    <div class="toast-container position-fixed bottom-0 start-0 p-3">
+        <div id="appToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-semibold"><i class="bi bi-check-circle-fill me-2"></i><span data-toast-text>تم بنجاح</span></div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="إغلاق"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        document.querySelector('[data-remind]')?.addEventListener('click', () => showToast('تم تفعيل التذكير بموعد الاختبار ⏰'));
+    </script>
+</body>
+</html>
